@@ -19,5 +19,4 @@ echo "ZSH..."
 ln -s $dir/zsh/rc.zsh ~/.zshrc
 ln -s $dir/zsh ~/.zsh
 
-echo "scriptz"
-ln -s $dir/bin ~/bin
+echo "Finished."
