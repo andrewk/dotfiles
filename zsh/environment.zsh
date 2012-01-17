@@ -1,5 +1,9 @@
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
+# flippa dev env
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 export EDITOR=/usr/bin/vim
 
 # Colors
