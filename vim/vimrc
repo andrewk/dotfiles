@@ -1,0 +1,125 @@
+call pathogen#infect()
+
+set nocompatible " vi is dead, long live vim
+
+" THE COLOURS CHILDREN, THE COLOURS!
+syntax on
+set background=dark
+colorscheme jellybeans_pda
+set guifont=Menlo:h12
+
+" Enable mouse in xterm etc.
+set mouse=a
+
+" always show line numbers
+set number
+
+" sync clipbaord with OSX
+set clipboard=unnamed
+
+" Visual width of tabs
+set tabstop=2 shiftwidth=2
+
+" Smart indenting when starting new line
+set smartindent
+
+" Indent with two spaces
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+" Ruby whitespace: two spaces, no tabs
+" (currently matches global config, remains as reference)
+autocmd FileType ruby setlocal sts=2 ts=2 sw=2 et
+autocmd FileType cucumber setlocal sts=2 ts=2 sw=2 et
+autocmd FileType scss setlocal sts=2 ts=2 sw=2 et
+
+" highlight trailing whitespace etc
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=brown guibg=brown
+match ExtraWhitespace /\s\+\%#\@<!$/
+
+" see http://items.sjbach.com/319/configuring-vim-right
+" essential
+set hidden
+runtime macros/matchit.vim
+set wildmenu
+set wildmode=list:longest
+" recommended
+set ignorecase
+set smartcase
+set scrolloff=3
+set backupdir=~/.vimbackup/swap
+set directory=~/.vimbackup/swap
+set ruler
+set visualbell
+" If you search for an all-lowercase string your search will be case-insensitive,
+" but if one or more characters is uppercase the search will be case-sensitive.
+set ignorecase
+set smartcase
+" :s/pttn/replace/g by default
+set gdefault
+" Highlisght search results as you type, <leader><space> to clear
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+
+" The following will make tabs and trailing spaces visible when requested
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+" short info tokens, short command line messages, no intro.
+set shortmess=atI
+
+" see http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+filetype off
+
+filetype plugin indent on
+set history=1000
+" Prevent exploits re modelines in files.
+set modelines=0
+" Make things better
+set encoding=utf-8
+set cursorline
+set ttyfast
+set laststatus=2
+
+" prevent errors from failing to release shift key early enough
+command W write
+command Q quit
+
+" Make j & k sane, instead of archaic “movement by file line instead of screen line”
+nnoremap j gj
+nnoremap k gk
+" save on losing focus
+autocmd FocusLost \f\+ :wa
+" Strip trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" disable middle-click paste, as I hit that all the time by mistake
+nnoremap <MiddleMouse> <Nop>
+nnoremap <2-MiddleMouse> <Nop>
+nnoremap <3-MiddleMouse> <Nop>
+nnoremap <4-MiddleMouse> <Nop>
+
+inoremap <MiddleMouse> <Nop>
+inoremap <2-MiddleMouse> <Nop>
+inoremap <3-MiddleMouse> <Nop>
+inoremap <4-MiddleMouse> <Nop>
+
+" Shortcuts for opening files in same directory as current file
+map <leader>en :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+""""""""""
+" Plugins
+
+
+" Ack
+nnoremap <leader>a :Ack
+
+" NERDTree
+nmap <silent> <leader>n :NERDTreeToggle<CR>
