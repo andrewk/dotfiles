@@ -15,6 +15,11 @@
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/buffkill"]
 	path = vim/bundle/buffkill
+[submodule "vim/bundle/powerline"]
+	path = vim/bundle/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/buffkill"]
+	path = bundle/buffkill
 	url = https://github.com/vim-scripts/bufkill.vim.git
 [submodule "vim/bundle/zencoding"]
 	path = vim/bundle/zencoding
