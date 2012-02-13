@@ -85,10 +85,6 @@ set cursorline
 set ttyfast
 set laststatus=2
 
-" prevent errors from failing to release shift key early enough
-command W write
-command Q quit
-
 " Make j & k sane, instead of archaic “movement by file line instead of screen line”
 nnoremap j gj
 nnoremap k gk
@@ -113,6 +109,19 @@ map <leader>en :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" Unbind the cursor keys in insert, normal and visual modes.
+for prefix in ['n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
+
+" Arrow keys navigate split windows!
+nmap <Up> <C-W><Up>
+nmap <Down> <C-W><Down>
+nmap <Left> <C-W><Left>
+nmap <Right> <C-W><Right>
 
 """"""""""
 " Plugins
