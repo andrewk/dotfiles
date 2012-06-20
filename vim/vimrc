@@ -8,8 +8,9 @@ set background=dark
 colorscheme jellybeans_pda
 set guifont=Menlo:h12
 
-" Enable mouse in xterm etc.
+" Enable mouse in xterm and enable long (>223) lines
 set mouse=a
+set ttymouse=xterm2
 
 " always show line numbers
 set number
@@ -28,6 +29,12 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+" override tab settings for php
+augroup filetype_php
+autocmd!
+autocmd FileType php setlocal noexpandtab shiftwidth=2 tabstop=2
+augroup END
 
 " Ruby whitespace: two spaces, no tabs
 " (currently matches global config, remains as reference)
