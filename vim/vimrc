@@ -120,6 +120,10 @@ map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+" quick insert new lines in normal mode
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
