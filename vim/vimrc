@@ -57,7 +57,7 @@ set wildmode=list:longest
 set ignorecase
 set smartcase
 set scrolloff=3
-set backupdir=~/.vimbackup/swap
+set nobackup
 set directory=~/.vimbackup/swap
 set ruler
 set visualbell

@@ -1,11 +1,19 @@
 alias pstree="pstree -g 2"
 alias hd="hexdump -C"
 
+# git
+alias gs='git status'
+alias gd='git diff -M'
+alias gf='git fetch'
+gls() {
+  query="$1"
+  shift
+  glog --pickaxe-regex "-S$query" "$@"
+}
+alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
+alias gl='glog --graph'
+alias gla='gl --all'
+alias glp='glog --patch'
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-bx() {
-  if [[ $1 == "bp" ]];
-    then command shift $@ && command $HOME/.rbenv/shims/bundle exec bluepill --no-privileged "$@";
-    else command $HOME/.rbenv/shims/bundle exec "$@";
-  fi;
-}
