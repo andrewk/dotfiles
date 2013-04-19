@@ -74,7 +74,7 @@ set hlsearch
 nnoremap <leader><space> :noh<cr>
 
 " The following will make tabs and trailing spaces visible when requested
-set listchars=tab:>-,trail:·,eol:$
+" set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 " short info tokens, short command line messages, no intro.
 set shortmess=atI
@@ -137,12 +137,7 @@ nmap <Down> <C-W><Down>
 nmap <Left> <C-W><Left>
 nmap <Right> <C-W><Right>
 
-""""""""""
-" Plugins
+" open new splits to the right or below instead of left or above
+set splitbelow
+set splitright
 
-
-" Ack
-nnoremap <leader>a :Ack
-
-" NERDTree
-nmap <silent> <leader>n :NERDTreeToggle<CR>
