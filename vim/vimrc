@@ -1,5 +1,6 @@
 call pathogen#infect()
 
+
 set nocompatible " vi is dead, long live vim
 
 " THE COLOURS CHILDREN, THE COLOURS!
@@ -23,6 +24,9 @@ set tabstop=2 shiftwidth=2
 
 " Smart indenting when starting new line
 set smartindent
+
+" dont attempt to render a/b/i/strong/em in HTML
+let html_no_rendering=1
 
 " Indent with two spaces
 set expandtab
@@ -58,7 +62,7 @@ set ignorecase
 set smartcase
 set scrolloff=3
 set nobackup
-set directory=~/.vimbackup/swap
+set directory=~/.backup
 set ruler
 set visualbell
 " If you search for an all-lowercase string your search will be case-insensitive,
@@ -141,3 +145,9 @@ nmap <Right> <C-W><Right>
 set splitbelow
 set splitright
 
+" spellcheck templates and commit messages
+if has('spell')
+  autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+  autocmd FileType eruby                    setlocal spell
+  autocmd BufNewFile,BufRead *.tpl.php      setlocal spell
+endif
