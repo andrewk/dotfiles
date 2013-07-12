@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/mysql/server-5.6/bin:$PATH"
 
 export EDITOR=/usr/bin/vim
 

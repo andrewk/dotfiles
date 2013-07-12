@@ -15,5 +15,8 @@ alias gl='glog --graph'
 alias gla='gl --all'
 alias glp='glog --patch'
 
+# rake
+alias rake='noglob rake'
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
