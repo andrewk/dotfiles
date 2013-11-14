@@ -11,6 +11,12 @@ dir=~/dotfiles                    # dotfiles directory
 echo "Changing to the $dir directory"
 cd $dir
 
+echo "GIT..."
+ln -s $dir/gitconfig ~/.gitconfig
+
+echo "ACK..."
+ln -s $dir/ackrc ~/.ackrc
+
 echo "VIM..."
 ln -s $dir/vim ~/.vim
 ln -s $dir/vim/vimrc ~/.vimrc
