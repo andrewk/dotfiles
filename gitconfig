@@ -1,0 +1,10 @@
+[push]
+	default = current
+[color]
+	ui = auto
+[alias]
+	st = status
+	co = checkout
+[user]
+	name = Andrew Krespanis
+	email = andrew@leftjustified.net
