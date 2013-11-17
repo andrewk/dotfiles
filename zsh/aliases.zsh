@@ -1,9 +1,6 @@
 alias pstree="pstree -g 2"
 alias hd="hexdump -C"
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
 # git
 alias gs='git status'
 alias gd='git diff -M'
@@ -23,5 +20,3 @@ alias glmerge='gla --simplify-by-decoration'
 # rake
 alias rake='noglob rake'
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
