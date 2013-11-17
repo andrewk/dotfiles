@@ -14,6 +14,9 @@ cd $dir
 echo "GIT..."
 ln -s $dir/gitconfig ~/.gitconfig
 
+echo "tmux..."
+ln -s $dir/tmux.conf ~/.tmux.conf
+
 echo "ACK..."
 ln -s $dir/ackrc ~/.ackrc
 
