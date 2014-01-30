@@ -7,6 +7,8 @@ post_sources=()
 # load remaining sources automatically
 auto_sources=(`for f in ~/.zsh/*.zsh; do basename $f .zsh; done`)
 
+source /usr/local/share/chruby/chruby.sh
+
 for source in rc $pre_sources $post_sources; do
   auto_sources[(i)$source]=""
 done
