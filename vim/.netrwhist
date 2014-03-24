@@ -1,9 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/vagrant/flippa/flippa-rails/app/views/dispute_mailer'
-let g:netrw_dirhist_2='/home/vagrant/flippa/flippa'
-let g:netrw_dirhist_3='/home/vagrant/flippa/flippa/templates'
-let g:netrw_dirhist_4='/home/vagrant/flippa/flippa/templates/email'
-let g:netrw_dirhist_5='/home/vagrant/flippa/flippa/templates/email/auction'
-let g:netrw_dirhist_6='/home/vagrant/flippa/flippa-rails/app/views/sell/revenue_details'
-let g:netrw_dirhist_7='/home/vagrant/flippa/flippa-rails/spec/acceptance/steps'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/andrew/Projects/99designs/contests/bundles/Marketing/Resources/public/css'
+let g:netrw_dirhist_2='/Users/andrew/Projects/99designs/flight-testing/app/js'
+let g:netrw_dirhist_3='/Users/andrew/Projects/99designs/flight-testing/app/js/page'

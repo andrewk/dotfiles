@@ -43,6 +43,6 @@
 [submodule "vim/bundle/vim-twig"]
 	path = vim/bundle/vim-twig
 	url = git@github.com:evidens/vim-twig.git
-[submodule "vim/bundle/powerline2"]
-	path = vim/bundle/powerline2
-	url = git@github.com:Lokaltog/powerline.git
+[submodule "vim/bundle/vim-qargs"]
+	path = vim/bundle/vim-qargs
+	url = git@github.com:henrik/vim-qargs.git
