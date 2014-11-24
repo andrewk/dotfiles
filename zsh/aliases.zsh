@@ -16,6 +16,7 @@ alias gl='glog --graph'
 alias gla='gl --all'
 alias glp='glog --patch'
 alias glmerge='gla --simplify-by-decoration'
+alias gclean='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 
 # rake
 alias rake='noglob rake'
