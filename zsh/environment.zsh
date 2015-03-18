@@ -2,9 +2,6 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/mysql/server-5.6/bin:
 
 export EDITOR=/usr/bin/vim
 
-# 99designs docker cache
-export docker_proxy=10.99.1.77:8080
-
 # Colors
 autoload colors zsh/terminfo
 colors
