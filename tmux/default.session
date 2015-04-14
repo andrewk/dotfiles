@@ -1,7 +1,8 @@
 # Default session layout
-new -s default -n default-vim
-neww -n default-git
+new -s default -n vim
+neww -n git
 splitw -h -p 30
 splitw -v -p 50
 selectw -t 1
 selectp -t 0
+run "tmux rename-session -t default $(basename $PWD)"
