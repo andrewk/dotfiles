@@ -16,6 +16,7 @@ ln -s $dir/gitconfig ~/.gitconfig
 
 echo "tmux..."
 ln -s $dir/tmux.conf ~/.tmux.conf
+ln -s $dir/tmux ~/.tmux
 
 echo "ACK..."
 ln -s $dir/ackrc ~/.ackrc
