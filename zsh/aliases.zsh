@@ -1,6 +1,9 @@
 alias pstree="pstree -g 2"
 alias hd="hexdump -C"
 
+# new tmux with default pane arrangement
+alias tux='tmux source-file ~/.tmux/default.session'
+
 # git
 alias gs='git status'
 alias gd='git diff -M'
