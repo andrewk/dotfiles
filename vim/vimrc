@@ -7,7 +7,7 @@ let mapleader=" "
 " THE COLOURS CHILDREN, THE COLOURS!
 syntax on
 set background=dark
-colorscheme jellybeans_pda
+colorscheme flatlandia
 set guifont=Menlo:h12
 
 " Enable mouse in xterm and enable long (>223) lines
@@ -149,10 +149,14 @@ endif
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " custom powerline build against brew'd python
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-set laststatus=2
+" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" set laststatus=2
 " hide default mode indicator in favour of Powerline
 set noshowmode
+
+" vim-airline theme
+let g:airline_theme = 'wombat'
+
 " fast switching of mode indication in Powerline
 if ! has('gui_running')
     set ttimeoutlen=10
