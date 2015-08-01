@@ -12,7 +12,3 @@ export CLICOLOR=1
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=HISTSIZE
-
-export LANGUAGE="en_AU.UTF-8"
-export LANG="en_AU.UTF-8"
-export LC_ALL="en_AU.UTF-8"

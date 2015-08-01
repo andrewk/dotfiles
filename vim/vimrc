@@ -99,7 +99,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Strip trailing whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <leader>q :%s/\s\+$//<cr>:let @/=''<cr>
 
 " refresh all buffers
 nnoremap <leader>+ :set noconfirm<cr>:bufdo e!<cr>:set confirm<cr>
@@ -120,6 +120,9 @@ map <leader>en :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" :w shortcut
+nnoremap <Leader>w :w<CR>
 
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['n', 'v']
