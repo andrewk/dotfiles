@@ -158,7 +158,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 set noshowmode
 
 " vim-airline theme
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'murmur'
 
 " fast switching of mode indication in Powerline
 if ! has('gui_running')
